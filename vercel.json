@@ -1,44 +1,10 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "frontend/dist/**",
-      "use": "@vercel/static"
-    }
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1.js" },
+    { "source": "/(.*)", "destination": "/frontend/dist/index.html" }
   ],
-  "routes": [
-    {
-      "src": "/api/translate",
-      "dest": "/api/translate.js"
-    },
-    {
-      "src": "/api/translate/(.*)",
-      "dest": "/api/translate.js"
-    },
-    {
-      "src": "/api/settings/(.*)",
-      "dest": "/api/settings.js"
-    },
-    {
-      "src": "/api/usage/(.*)",
-      "dest": "/api/usage.js"
-    },
-    {
-      "src": "/api/widget/(.*)",
-      "dest": "/api/widget.js"
-    },
-    {
-      "src": "/api/auth/(.*)",
-      "dest": "/api/auth.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/frontend/dist/$1",
-      "check": true
-    }
-  ]
+  "installCommand": "cd frontend && npm install",
+  "buildCommand": "cd frontend && npm run build",
+  "outputDirectory": "frontend/dist"
 }
