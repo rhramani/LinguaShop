@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Navigate, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, Link, useLocation } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import Languages from './pages/Languages';
 import TranslationEditor from './pages/TranslationEditor';

@@ -53,3 +53,6 @@ node_modules/.cache/
 # Local development
 .vercel/
 .railway/
+
+.vercel
+.env*.local
