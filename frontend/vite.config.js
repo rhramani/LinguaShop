@@ -7,7 +7,7 @@ export default defineConfig({
   root: './src',
   base: './',
   build: {
-    outDir: '../frontend/dist',
+    outDir: './dist',
     emptyOutDir: true,
     sourcemap: false,
     rollupOptions: {
