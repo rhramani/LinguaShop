@@ -1,16 +1,14 @@
 {
-  "name": "linguashop-vercel",
+  "name": "linguashop",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "node server.js"
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd frontend && npm start",
+    "vercel": "vercel"
   },
   "dependencies": {
-    "axios": "^1.6.0",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.0.0"
-  },
-  "devDependencies": {
-    "vercel": "^32.0.0"
+    "axios": "^1.6.0"
   }
 }
